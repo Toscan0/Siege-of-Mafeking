@@ -7,6 +7,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Dropdown))]
 public class CheckTeamName : MonoBehaviour
 {
+    public static Action<string> OnTeamNameChoosen;
+
     // Dropdown text
     [SerializeField]
     private Text label;
@@ -47,18 +49,19 @@ public class CheckTeamName : MonoBehaviour
 
     public void Dropdown_IndexChanged(int newIndex)
     {
-        teamNames name = (teamNames)newIndex;
-        selectedTeamName = name.ToString();
+        string name = ((teamNames)newIndex).ToString();
+        selectedTeamName = name;
 
         if(newIndex == 0)
         {
             label.color = mandatoryFieldColor;
+            OnTeamNameChoosen?.Invoke("");
         }
         else
         {
             label.color = defaultColor;
 
-            //TODO : ALERT GAME MANAGER name defined
+            OnTeamNameChoosen?.Invoke(name);
         }
     }
 }
