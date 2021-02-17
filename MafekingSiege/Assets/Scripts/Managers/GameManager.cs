@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        CheckTeamName.OnTeamNameChoosen += UpdateTeamName;
-        CheckUserName.OnUserNameChoosen += UpdateUserName;
+        DefineTeamName.OnTeamNameChoosen += UpdateTeamName;
+        DefineUserName.OnUserNameChoosen += UpdateUserName;
     }
 
     private void UpdateUserName(string newName)
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        CheckTeamName.OnTeamNameChoosen -= UpdateTeamName;
-        CheckUserName.OnUserNameChoosen -= UpdateUserName;
+        DefineTeamName.OnTeamNameChoosen -= UpdateTeamName;
+        DefineUserName.OnUserNameChoosen -= UpdateUserName;
     }
 }

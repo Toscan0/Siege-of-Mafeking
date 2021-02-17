@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class CheckUserName : MonoBehaviour
+public class DefineUserName : MonoBehaviour
 {
     public static Action<string> OnUserNameChoosen;
 

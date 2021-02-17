@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Dropdown))]
-public class CheckTeamName : MonoBehaviour
+public class DefineTeamName : MonoBehaviour
 {
     public static Action<string> OnTeamNameChoosen;
 
