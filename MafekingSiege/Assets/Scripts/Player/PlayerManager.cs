@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     // Health
     [SerializeField]
     private HealthBar healthBar;
-    private const int maxHealth = 20;
+    private const int maxHealth = 100;
     private int currentHealth = 0;
     private bool isDead = false;
 
