@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     // Health
     [SerializeField]
     private HealthBar healthBar;
-    private const int maxHealth = 100;
+    private const int maxHealth = 20;
     private int currentHealth = 0;
     private bool isDead = false;
 
@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     void IDamageable.TakeDamage(int dmg)
     {
         currentHealth -= dmg;
-        if(currentHealth < 0)
+        if(currentHealth <= 0)
         {
             currentHealth = 0;
             healthBar.SetHealth(currentHealth);
