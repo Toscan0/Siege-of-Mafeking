@@ -1,12 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviour
 {
-    public static float CurrentTime { get; private set; } = 10 * 60; //in minutes
+    public static Action OnTimeOver;
+    public static float CurrentTime { get; private set; } = 1 * 60; //in minutes
 
     [SerializeField]
     private Text timerText;
+
+    private bool stopTimer = false;
 
     void Start()
     {
@@ -15,13 +19,16 @@ public class TimerManager : MonoBehaviour
 
     void Update()
     {
-        if (CurrentTime > 0)
+        if (CurrentTime > 0 && stopTimer == false)
         {
             CurrentTime -= Time.deltaTime;
         }
-        else
+        else if(CurrentTime <= 0 && stopTimer == false)
         {
+            stopTimer = true;
             CurrentTime = 0;
+
+            OnTimeOver?.Invoke();
         }
         SetTimerText();
     }
