@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
 public class PostOnServer : MonoBehaviour
 {
+    public static Action OnDataSended;
+
     private const string POST_HIGHSCORE_URL = "" +
         "http://web.tecnico.ulisboa.pt/~ist181633/SCOUTS/Post.php";
-
 
     public void SendData(string teamName, string userName, string time, string points)
     {
@@ -39,6 +41,6 @@ public class PostOnServer : MonoBehaviour
             Debug.LogError("UnityWebRequest post error: " + www.error);
         }
 
-        //TODO : Alert data sended
+        OnDataSended?.Invoke();
     }
 }
