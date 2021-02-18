@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerSoundManager))]
 public class PlayerManager : MonoBehaviour, IDamageable
 {
+    public static Action OnPlayerDeath;
+
     // Health
     [SerializeField]
     private HealthBar healthBar;
     private const int maxHealth = 100;
     private int currentHealth = 0;
+    private bool isDead = false;
 
     //Movement
     private float horizontalMove = 0f;
@@ -38,7 +42,9 @@ public class PlayerManager : MonoBehaviour, IDamageable
 
     void FixedUpdate()
     {
-        playerMovement.Move(new Vector2 (horizontalMove, verticalMove) * Time.fixedDeltaTime);
+        if (!isDead) {
+            playerMovement.Move(new Vector2(horizontalMove, verticalMove) * Time.fixedDeltaTime);
+        }
     }
 
     void IDamageable.TakeDamage(int dmg)
@@ -48,7 +54,10 @@ public class PlayerManager : MonoBehaviour, IDamageable
         {
             currentHealth = 0;
             healthBar.SetHealth(currentHealth);
-            // TODO: PLAYER IS DEAD
+
+            isDead = true;
+            OnPlayerDeath?.Invoke();
+
             return;
         }
         healthBar.SetHealth(currentHealth);

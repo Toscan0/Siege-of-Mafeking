@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class TimerManager : MonoBehaviour
 {
     public static Action OnTimeOver;
-    public static float CurrentTime { get; private set; } = 1 * 60; //in minutes
+    public static float CurrentTime { get; private set; } = 10;// * 60; //in minutes
 
     [SerializeField]
     private Text timerText;

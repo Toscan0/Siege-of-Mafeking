@@ -34,8 +34,8 @@ public class PopulateCanvas : MonoBehaviour
     {
         string teamName = "Team: " + GameManager.TeamName;
         string userName = "User: " + GameManager.UserName;
-        string timer = "Time: " + GameManager.UserName;
-        string Points = "Points: " + GameManager.UserName;
+        string timer = "Time: " + TimerManager.CurrentTime;
+        string Points = "Points: " + GameManager.Points;
 
         text.text = teamName + "\n" +
             userName + "\n" +
