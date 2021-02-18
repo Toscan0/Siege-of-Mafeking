@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class PlayerSoundManager : MonoBehaviour
+public class BombSoundManager : MonoBehaviour
 {
     private AudioSource audioSorce;
 
