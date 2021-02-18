@@ -6,14 +6,14 @@ using UnityEngine.Networking;
 public class PostOnServer : MonoBehaviour
 {
     private const string POST_HIGHSCORE_URL = "" +
-        "https://web.tecnico.ulisboa.pt/~ist181633/CatchTheFly/ServerSide/Post_HighScore.php";
+        "http://web.tecnico.ulisboa.pt/~ist181633/SCOUTS/Post.php";
 
 
     public void SendData(string teamName, string userName, string time, string points)
     {
         string dataToSend = ParseDataToSend(teamName, userName, time, points);
 
-        StartCoroutine(dataToSend);
+        StartCoroutine(PostData(dataToSend));
     }
 
     private string ParseDataToSend(string teamName, string userName, string time, string points)
