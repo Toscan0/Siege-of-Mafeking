@@ -28,15 +28,14 @@ public class BombCollisionManager : MonoBehaviour
             bombAttack.Attack(damageable);
         }
 
-        bombSoundManager.PlaySound(explosionSound);
-        //gameObject.SetActive(false);
-        DestroyBomb();
-        Instantiate(explosionAnim);
-
+        ExplodeBomb();
     }
 
-    private void DestroyBomb()
+    private void ExplodeBomb()
     {
+        bombSoundManager.PlaySound(explosionSound);
+        Instantiate(explosionAnim);
+
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<Collider2D>().enabled = false;
         gameObject.GetComponent<Rigidbody2D>().simulated = false;

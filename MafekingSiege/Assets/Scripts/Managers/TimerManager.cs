@@ -25,9 +25,7 @@ public class TimerManager : MonoBehaviour
         }
         SetTimerText();
     }
-
     
-
     private void SetTimerText()
     {
         if (timerText != null)
