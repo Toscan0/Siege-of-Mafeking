@@ -2,11 +2,9 @@
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private PlayButton playButton;
-
-    private static string teamName = "";
-    private static string userName = "";
+    public static string TeamName { get; private set; } = "";
+    public static string UserName { get; private set; } = "";
+    public static bool PlayerLost { get; private set; } = false; // false = time over
 
     private void Awake()
     {
@@ -16,34 +14,18 @@ public class GameManager : MonoBehaviour
 
     private void UpdateUserName(string newName)
     {
-        userName = newName;
-
-        CheckNames();
+        UserName = newName;
     }
 
     private void UpdateTeamName(string newName)
     {
         if(newName == "None")
         {
-            teamName = "";
+            TeamName = "";
         }
         else
         {
-            teamName = newName;
-        }
-
-        CheckNames();
-    }
-
-    private void CheckNames()
-    {
-        if(teamName.Trim() != "" && userName.Trim() != "")
-        {
-            playButton.SetInteractable(true);
-        }
-        else
-        {
-            playButton.SetInteractable(false);
+            TeamName = newName;
         }
     }
 
