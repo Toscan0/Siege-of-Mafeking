@@ -21,7 +21,7 @@ public class PostOnServer : MonoBehaviour
         return teamName + ";" + 
             userName + ";" +
             time + ";" +
-            points + ";";
+            points + ";\n";
     }
 
     private IEnumerator PostData(string data)

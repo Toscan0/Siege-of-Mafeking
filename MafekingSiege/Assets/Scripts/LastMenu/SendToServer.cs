@@ -17,12 +17,6 @@ public class SendToServer : MonoBehaviour
                 GameManager.UserName,
                 GameManager.UserName
                 );
-
-            postOnServer.SendData(
-                "BD",
-                "AI",
-                "555555",
-                "111");
         }
     }
 }
