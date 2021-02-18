@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
 
     private void Start()
     {
+        currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
@@ -43,6 +44,14 @@ public class PlayerManager : MonoBehaviour, IDamageable
     void IDamageable.TakeDamage(int dmg)
     {
         currentHealth -= dmg;
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+            healthBar.SetHealth(currentHealth);
+            // TODO: PLAYER IS DEAD
+            return;
+        }
         healthBar.SetHealth(currentHealth);
+        //TODO PLayer blink
     }
 }
