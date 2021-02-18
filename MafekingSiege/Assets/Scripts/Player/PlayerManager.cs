@@ -2,8 +2,15 @@
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerSoundManager))]
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour, IDamageable
 {
+    // Health
+    [SerializeField]
+    private HealthBar healthBar;
+    private const int maxHealth = 100;
+    private int currentHealth = 0;
+
+    //Movement
     private float horizontalMove = 0f;
     private float verticalMove = 0f;
 
@@ -16,6 +23,11 @@ public class PlayerManager : MonoBehaviour
         playerSoundManager = GetComponent<PlayerSoundManager>();
     }
 
+    private void Start()
+    {
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
     void Update()
     {
         // move player
@@ -26,5 +38,11 @@ public class PlayerManager : MonoBehaviour
     void FixedUpdate()
     {
         playerMovement.Move(new Vector2 (horizontalMove, verticalMove) * Time.fixedDeltaTime);
+    }
+
+    void IDamageable.TakeDamage(int dmg)
+    {
+        currentHealth -= dmg;
+        healthBar.SetHealth(currentHealth);
     }
 }
