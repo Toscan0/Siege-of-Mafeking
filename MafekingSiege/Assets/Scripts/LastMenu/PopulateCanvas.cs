@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PopulateCanvas : MonoBehaviour
 {
@@ -6,10 +7,13 @@ public class PopulateCanvas : MonoBehaviour
     private GameObject gameOverTitle;
     [SerializeField]
     private GameObject timeOverTitle;
+    [SerializeField]
+    private Text text;
 
     private void Start()
     {
         PopulateTitle();
+        PopulateText();
     }
 
     private void PopulateTitle()
@@ -32,5 +36,10 @@ public class PopulateCanvas : MonoBehaviour
         string userName = "User: " + GameManager.UserName;
         string timer = "Timer: " + GameManager.UserName;
         string Points = "User: " + GameManager.UserName;
+
+        text.text = teamName + "\n" +
+            userName + "\n" +
+            timer + "\n" +
+            Points + "\n";
     }
 }
