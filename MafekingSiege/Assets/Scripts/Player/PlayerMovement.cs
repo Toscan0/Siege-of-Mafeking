@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    internal void HorizontalMove(Vector3 pos)
+    [SerializeField]
+    private float movementSpeed = 5f;
+
+    private Rigidbody2D rb2D;
+    
+    void Awake()
     {
-        transform.position += pos;
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    internal void VerticalMove(Vector3 pos)
+    internal void Move(Vector2 pos)
     {
-        transform.position += pos;
+        rb2D.MovePosition(rb2D.position + pos * movementSpeed);
     }
 }
