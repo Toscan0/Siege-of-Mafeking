@@ -28,13 +28,14 @@ public class BombCollisionManager : MonoBehaviour
             bombAttack.Attack(damageable);
         }
 
-        ExplodeBomb();
+        
+        ExplodeBomb(collision.gameObject.transform.position);
     }
 
-    private void ExplodeBomb()
+    private void ExplodeBomb(Vector3 collisionPos)
     {
         bombSoundManager.PlaySound(explosionSound);
-        Instantiate(explosionAnim, gameObject.transform.position, Quaternion.identity);
+        Instantiate(explosionAnim, collisionPos, Quaternion.identity);
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<Collider2D>().enabled = false;

@@ -28,7 +28,7 @@ public class BombSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minReloadTime, maxReloadTime));
 
-            // 30% of launch bomb
+            // k% of launch bomb
             if (UnityEngine.Random.Range(0, 100) <= 20)
             {
                 Instantiate(bombPrefab, gameObject.transform.position, Quaternion.identity);
