@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
 
     // MSG
     [SerializeField]
+    private MSGCanvas MSGCanvas;
+    [SerializeField]
     private AudioClip MSGReceived;
     [SerializeField]
     private AudioClip MSGDelivered;
@@ -85,6 +87,8 @@ public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
         {
             hasMessage = true;
             playerSoundManager.PlaySound(MSGReceived);
+            MSGCanvas.UpdateImageVisibility(true);
+
             return true;
         }
         return false;
@@ -97,6 +101,7 @@ public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
             hasMessage = false;
             playerSoundManager.PlaySound(MSGDelivered);
             OnMSGDelivered?.Invoke();
+            MSGCanvas.UpdateImageVisibility(false);
 
             return true;
         }
