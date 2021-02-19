@@ -8,9 +8,6 @@ public class GameManager : MonoBehaviour
     public static bool PlayerLost { get; private set; } = false; // false = time over
     public static int Points { get; private set; } = 0; // false = time over
 
-    [SerializeField]
-    private LoadSceneManager loadSceneManager;
-
     private void Awake()
     {
         DefineTeamName.OnTeamNameChoosen += UpdateTeamName;
@@ -22,13 +19,11 @@ public class GameManager : MonoBehaviour
     private void PlayerDeath()
     {
         PlayerLost = true;
-        loadSceneManager.LoadNextScene();
     }
 
     private void TimeOver()
     {
         PlayerLost = false;
-        loadSceneManager.LoadNextScene();
     }
 
     private void UpdateUserName(string newName)
