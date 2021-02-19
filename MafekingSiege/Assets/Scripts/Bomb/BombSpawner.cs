@@ -7,8 +7,8 @@ public class BombSpawner : MonoBehaviour
     [SerializeField]
     private GameObject bombPrefab;
 
-    private float reloadTime = 5f;
-
+    private float minReloadTime = 4.5f;
+    private float maxReloadTime = 5.5f;
 
     private void OnDrawGizmos()
     {
@@ -26,9 +26,13 @@ public class BombSpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(bombPrefab, gameObject.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(UnityEngine.Random.Range(minReloadTime, maxReloadTime));
 
-            yield return new WaitForSeconds(reloadTime);
+            // 30% of launch bomb
+            if (UnityEngine.Random.Range(0, 100) <= 20)
+            {
+                Instantiate(bombPrefab, gameObject.transform.position, Quaternion.identity);
+            }            
         }
     }
 }
