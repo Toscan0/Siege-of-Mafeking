@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MSGReceiver : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class MSGReceiver : MonoBehaviour
         IMessageable messageable = collision.gameObject.GetComponent<IMessageable>();
         if (messageable != null)
         {
-            bool msgReceived = messageable.DeliverMSG();
+            messageable.DeliverMSG();
         }
     }
 }

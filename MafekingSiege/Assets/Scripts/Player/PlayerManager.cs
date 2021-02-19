@@ -1,14 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerSoundManager))]
-[RequireComponent(typeof(Animator))]
 public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
 {
     public static Action OnPlayerDeath;
 
     // MSG
+    [SerializeField]
+    private AudioClip MSGReceived;
+    [SerializeField]
+    private AudioClip MSGDelivered;
     private bool hasMessage = false;
 
     // Health
@@ -79,6 +83,18 @@ public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
         if (!hasMessage)
         {
             hasMessage = true;
+            playerSoundManager.PlaySound(MSGReceived);
+            return true;
+        }
+        return false;
+    }
+
+    bool IMessageable.DeliverMSG()
+    {
+        if (hasMessage)
+        {
+            hasMessage = false;
+            playerSoundManager.PlaySound(MSGDelivered);
             return true;
         }
         return false;
