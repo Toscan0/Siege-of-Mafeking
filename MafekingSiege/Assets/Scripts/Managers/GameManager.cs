@@ -14,6 +14,12 @@ public class GameManager : MonoBehaviour
         DefineUserName.OnUserNameChoosen += UpdateUserName;
         TimerManager.OnTimeOver += TimeOver;
         PlayerManager.OnPlayerDeath += PlayerDeath;
+        PlayerManager.OnMSGDelivered += IncrPoints;
+    }
+
+    private void IncrPoints()
+    {
+        Points++;
     }
 
     private void PlayerDeath()
@@ -49,5 +55,6 @@ public class GameManager : MonoBehaviour
         DefineUserName.OnUserNameChoosen -= UpdateUserName;
         TimerManager.OnTimeOver -= TimeOver;
         PlayerManager.OnPlayerDeath -= PlayerDeath;
+        PlayerManager.OnMSGDelivered -= IncrPoints;
     }
 }

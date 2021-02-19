@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
 {
     public static Action OnPlayerDeath;
+    public static Action OnMSGDelivered;
 
     // MSG
     [SerializeField]
@@ -95,6 +96,8 @@ public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
         {
             hasMessage = false;
             playerSoundManager.PlaySound(MSGDelivered);
+            OnMSGDelivered?.Invoke();
+
             return true;
         }
         return false;

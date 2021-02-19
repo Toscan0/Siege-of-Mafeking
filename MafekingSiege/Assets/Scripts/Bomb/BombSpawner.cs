@@ -9,11 +9,11 @@ public class BombSpawner : MonoBehaviour
 
     private float minReloadTime = 4.5f;
     private float maxReloadTime = 5.5f;
+    private int launchProbability = 20;
 
     private void OnDrawGizmos()
     {
-        // Draw a semitransparent blue cube at the transforms position
-        Gizmos.color = new Color(0, 1, 0, 0.5f);
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawCube(transform.position, new Vector3(1.7f, 1.7f, 1));
     }
 
@@ -29,7 +29,7 @@ public class BombSpawner : MonoBehaviour
             yield return new WaitForSeconds(UnityEngine.Random.Range(minReloadTime, maxReloadTime));
 
             // k% of launch bomb
-            if (UnityEngine.Random.Range(0, 100) <= 20)
+            if (UnityEngine.Random.Range(0, 100) <= launchProbability)
             {
                 Instantiate(bombPrefab, gameObject.transform.position, Quaternion.identity);
             }            
