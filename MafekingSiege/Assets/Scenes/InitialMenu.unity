@@ -736,15 +736,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tenta entregar o m\xE1ximo de mensagens possiveis no menor tempo poss\xEDvel.\nCuidado
-    com as bombas, se perderes a tua vida, \xE9 o fim...\n\nPodes jogar as vezes
-    que quiseres, mas apenas as tuas 10 primeiras entradas ser\xE3o v\xE1lidas"
+  m_Text: "1) Tenta entregar o m\xE1ximo de mensagens possiveis no menor tempo poss\xEDvel.
+    S\xF3 podes carregar uma mensagem de cada vez!\n2) Tens 10 minutos para jogar
+    \n3) Podes jogar as vezes que quiseres, mas apenas as tuas 10 primeiras entradas
+    ser\xE3o v\xE1lidas.\n2) Cuidado com as bombas, se perderes a tua vida, \xE9
+    o fim...\n\n"
 --- !u!222 &633633662
 CanvasRenderer:
   m_ObjectHideFlags: 0
