@@ -211,10 +211,10 @@ GameObject:
   - component: {fileID: 162179199}
   - component: {fileID: 162179198}
   - component: {fileID: 162179197}
+  - component: {fileID: 162179200}
   - component: {fileID: 162179196}
   - component: {fileID: 162179195}
   - component: {fileID: 162179194}
-  - component: {fileID: 162179200}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged

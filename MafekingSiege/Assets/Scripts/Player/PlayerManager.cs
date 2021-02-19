@@ -3,6 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerSoundManager))]
+[RequireComponent(typeof(Animator))]
 public class PlayerManager : MonoBehaviour, IDamageable
 {
     public static Action OnPlayerDeath;
@@ -20,11 +21,13 @@ public class PlayerManager : MonoBehaviour, IDamageable
 
     private PlayerMovement playerMovement;
     private PlayerSoundManager playerSoundManager;
+    private Animator animator;
 
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerSoundManager = GetComponent<PlayerSoundManager>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -38,6 +41,10 @@ public class PlayerManager : MonoBehaviour, IDamageable
         // move player
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
+
+        animator.SetFloat("Horizontal", horizontalMove);
+        animator.SetFloat("Vertical", verticalMove);
+        animator.SetFloat("Speed", new Vector2(horizontalMove, verticalMove).normalized.sqrMagnitude);
     }
 
     void FixedUpdate()
