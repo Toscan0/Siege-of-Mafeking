@@ -34,7 +34,7 @@ public class BombCollisionManager : MonoBehaviour
     private void ExplodeBomb()
     {
         bombSoundManager.PlaySound(explosionSound);
-        Instantiate(explosionAnim);
+        Instantiate(explosionAnim, gameObject.transform.position, Quaternion.identity);
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<Collider2D>().enabled = false;
