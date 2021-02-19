@@ -35812,7 +35812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3921719178947897799, guid: 4b3cf5e0bbf2c06409eddf7b1fe6f99e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3921719178947897799, guid: 4b3cf5e0bbf2c06409eddf7b1fe6f99e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36068,7 +36068,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time left: mm:ss:ms'
+  m_Text: mm:ss:ms
 --- !u!222 &1398926531
 CanvasRenderer:
   m_ObjectHideFlags: 0
