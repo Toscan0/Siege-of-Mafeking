@@ -4,9 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerSoundManager))]
 [RequireComponent(typeof(Animator))]
-public class PlayerManager : MonoBehaviour, IDamageable
+public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
 {
     public static Action OnPlayerDeath;
+
+    // MSG
+    private bool hasMessage = false;
 
     // Health
     [SerializeField]
@@ -69,5 +72,15 @@ public class PlayerManager : MonoBehaviour, IDamageable
         }
         healthBar.SetHealth(currentHealth);
         //TODO PLayer blink
+    }
+
+    bool IMessageable.TakeMSG()
+    {
+        if (!hasMessage)
+        {
+            hasMessage = true;
+            return true;
+        }
+        return false;
     }
 }
