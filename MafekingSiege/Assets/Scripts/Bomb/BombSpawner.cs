@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class BombSpawner : MonoBehaviour
+public class BombSpawner : BombSpawnerAbstract
 {
     [SerializeField]
     private GameObject bombPrefab;
 
     private float minReloadTime = 2.5f;
-    private float maxReloadTime = 6.5f;
-    private int launchProbability = 20;
+    private float maxReloadTime = 5f;
+    
 
     private void OnDrawGizmos()
     {
@@ -28,7 +28,7 @@ public class BombSpawner : MonoBehaviour
             yield return new WaitForSeconds(UnityEngine.Random.Range(minReloadTime, maxReloadTime));
 
             // k% of launch bomb
-            if (UnityEngine.Random.Range(0, 100) <= launchProbability)
+            if (UnityEngine.Random.Range(0, 100) <= LaunchProbability)
             {
                 Instantiate(bombPrefab, gameObject.transform.position, Quaternion.identity);
             }            

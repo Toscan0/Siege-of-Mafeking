@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static string UserName { get; private set; } = "";
     public static bool PlayerLost { get; private set; } = false; // false = time over
     public static int Points { get; private set; } = 0; // false = time over
-
+    
     private void Awake()
     {
         DefineTeamName.OnTeamNameChoosen += UpdateTeamName;
@@ -20,7 +20,19 @@ public class GameManager : MonoBehaviour
     private void IncrPoints()
     {
         Points++;
+
+        BombSpawner.LaunchProbability++;
+
+        if (Points % 5 == 0)
+        {
+            BombSpawner.LaunchProbability++;
+        }
+        if (Points % 10 == 0)
+        {
+            BombSpawner.LaunchProbability++;
+        }
     }
+    
 
     private void PlayerDeath()
     {
