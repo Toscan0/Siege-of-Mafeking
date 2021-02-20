@@ -1,12 +1,15 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
 
 [RequireComponent(typeof(Button))]
 public class RestartButton : MonoBehaviour
 {
     private Button button;
+
+    [DllImport("__Internal")]
+    private static extern void Hello();
 
     private void Awake()
     {
@@ -22,7 +25,7 @@ public class RestartButton : MonoBehaviour
 
     public void Restart()
     {
-        Application.ExternalEval("document.location.reload(true)");
+        Hello();
     }
 
     private void OnDestroy()
