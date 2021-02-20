@@ -8,9 +8,6 @@ public class RestartButton : MonoBehaviour
 {
     private Button button;
 
-    [DllImport("__Internal")]
-    private static extern void Hello();
-
     private void Awake()
     {
         PostOnServer.OnDataSended += EnableButton;
@@ -23,13 +20,14 @@ public class RestartButton : MonoBehaviour
         button.interactable = true;
     }
 
-    public void Restart()
-    {
-        Hello();
-    }
-
     private void OnDestroy()
     {
         PostOnServer.OnDataSended -= EnableButton;
+    }
+
+
+    public void Restart()
+    {
+        //TODO
     }
 }
