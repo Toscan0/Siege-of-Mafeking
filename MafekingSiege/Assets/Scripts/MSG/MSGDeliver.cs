@@ -6,7 +6,7 @@ public class MSGDeliver : MonoBehaviour
     [SerializeField]
     private GameObject Parchment;
 
-    private bool hasMSG;
+    private bool hasMSG = false;
     private int msgProbability = 50;
     private float minReloadTime = 1f;
     private float maxReloadTime = 4f;
@@ -20,13 +20,16 @@ public class MSGDeliver : MonoBehaviour
     {
         while (true)
         {
-            if (UnityEngine.Random.Range(0, 100) <= msgProbability)
+            if (!hasMSG)
             {
-                NewMSG();
-            }
-            else
-            {
-                NoMSG();
+                if (UnityEngine.Random.Range(0, 100) <= msgProbability)
+                {
+                    NewMSG();
+                }
+                else
+                {
+                    NoMSG();
+                }
             }
 
             yield return new WaitForSeconds(UnityEngine.Random.Range(minReloadTime, maxReloadTime));
