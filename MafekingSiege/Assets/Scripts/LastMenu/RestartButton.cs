@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Button))]
 public class RestartButton : MonoBehaviour
@@ -17,8 +18,11 @@ public class RestartButton : MonoBehaviour
     private void EnableButton()
     {
         button.interactable = true;
+    }
 
-        // TODO : RESTART
+    public void Restart()
+    {
+        // RELOAD PAGE
     }
 
     private void OnDestroy()
