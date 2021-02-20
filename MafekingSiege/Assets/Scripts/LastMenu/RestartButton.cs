@@ -1,33 +1,25 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Runtime.InteropServices;
 
-[RequireComponent(typeof(Button))]
+[RequireComponent(typeof(Text))]
 public class RestartButton : MonoBehaviour
 {
-    private Button button;
+    private Text text;
 
     private void Awake()
     {
-        PostOnServer.OnDataSended += EnableButton;
-
-        button = GetComponent<Button>();
+        PostOnServer.OnDataSended += EnableText;
+        text = GetComponent<Text>();
     }
 
-    private void EnableButton()
+    private void EnableText()
     {
-        button.interactable = true;
+        text.enabled = true;
     }
 
     private void OnDestroy()
     {
-        PostOnServer.OnDataSended -= EnableButton;
-    }
-
-
-    public void Restart()
-    {
-        //TODO
+        PostOnServer.OnDataSended -= EnableText;
     }
 }
