@@ -11,19 +11,30 @@ public class PostOnServer : MonoBehaviour
     private const string POST_HIGHSCORE_URL = "" +
         "http://web.tecnico.ulisboa.pt/~ist181633/SCOUTS/Post.php";
 
-    public void SendData(string teamName, string userName, string time, string points)
+    public void SendData(string teamName, string userName, float time, int points)
     {
         string dataToSend = ParseDataToSend(teamName, userName, time, points);
 
         StartCoroutine(PostData(dataToSend));
     }
 
-    private string ParseDataToSend(string teamName, string userName, string time, string points)
+    private string ParseDataToSend(string teamName, string userName, float time, int points)
     {
+        float score = ScoreCalculator(time, points);
+
         return teamName + ";" + 
             userName + ";" +
             time + ";" +
-            points + ";\n";
+            points + ";" +
+            "Score: " + score + ";\n";
+    }
+
+    private float ScoreCalculator(float time, int points)
+    {
+        float t = ((10 * 60) - time);
+
+        // TODO: update formula
+        return t * points;
     }
 
     private IEnumerator PostData(string data)

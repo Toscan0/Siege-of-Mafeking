@@ -22,7 +22,7 @@ public class RestartButton : MonoBehaviour
 
     public void Restart()
     {
-        // RELOAD PAGE
+        Application.ExternalEval("document.location.reload(true)");
     }
 
     private void OnDestroy()

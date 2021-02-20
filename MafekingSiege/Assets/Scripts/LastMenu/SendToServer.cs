@@ -14,8 +14,8 @@ public class SendToServer : MonoBehaviour
             postOnServer.SendData(
                 GameManager.TeamName,
                 GameManager.UserName,
-                TimerManager.CurrentTime.ToString(),
-                GameManager.Points.ToString()
+                TimerManager.CurrentTime,
+                GameManager.Points
                 );
         }
     }

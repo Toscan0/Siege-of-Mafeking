@@ -32,10 +32,10 @@ public class PopulateCanvas : MonoBehaviour
 
     private void PopulateText()
     {
-        string teamName = "Team: " + GameManager.TeamName;
-        string userName = "User: " + GameManager.UserName;
-        string timer = "Time: " + TimerManager.CurrentTime;
-        string Points = "Points: " + GameManager.Points;
+        string teamName = "Equipa: " + GameManager.TeamName;
+        string userName = "Jogador: " + GameManager.UserName;
+        string timer = "Tempo jogado: " + ((10 * 60) - TimerManager.CurrentTime);
+        string Points = "Pontos: " + GameManager.Points;
 
         text.text = teamName + "\n" +
             userName + "\n" +

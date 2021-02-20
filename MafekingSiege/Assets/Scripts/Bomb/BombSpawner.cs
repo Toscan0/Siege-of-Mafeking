@@ -6,8 +6,8 @@ public class BombSpawner : MonoBehaviour
     [SerializeField]
     private GameObject bombPrefab;
 
-    private float minReloadTime = 4.5f;
-    private float maxReloadTime = 5.5f;
+    private float minReloadTime = 2.5f;
+    private float maxReloadTime = 6.5f;
     private int launchProbability = 20;
 
     private void OnDrawGizmos()
