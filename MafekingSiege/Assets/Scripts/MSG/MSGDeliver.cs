@@ -1,15 +1,26 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Collider2D))]
 public class MSGDeliver : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject Parchment;
-
     private bool hasMSG = false;
     private int msgProbability = 50;
     private float minReloadTime = 1f;
     private float maxReloadTime = 4f;
+
+    private SpriteRenderer spriteRenderer;
+    private Collider2D col2D;
+    private Animator animator;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        col2D = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -55,13 +66,29 @@ public class MSGDeliver : MonoBehaviour
 
     private void NoMSG()
     {
-        Parchment.SetActive(false);
+        spriteRenderer.enabled = false;
+        col2D.enabled = false;
         hasMSG = false;
     }
 
     private void NewMSG()
     {
-        Parchment.SetActive(true);
+        SelectNPC();
+
+        spriteRenderer.enabled = true;
+        col2D.enabled = true;
         hasMSG = true;
+    }
+
+    private void SelectNPC()
+    {
+        if (UnityEngine.Random.Range(0, 100) <= 50)
+        {
+            animator.SetBool("is1", true);
+        }
+        else
+        {
+            animator.SetBool("is2", false);
+        }
     }
 }
