@@ -88,7 +88,7 @@ public class MSGDeliver : MonoBehaviour
         }
         else
         {
-            animator.SetBool("is2", false);
+            animator.SetBool("is1", false);
         }
     }
 }
