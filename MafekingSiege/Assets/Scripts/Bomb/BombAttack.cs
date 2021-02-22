@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BombAttack : MonoBehaviour
 {
-    private const int damage = 20;
+    private const int damage = 10;
 
     internal void Attack(IDamageable damageable)
     {
