@@ -8,8 +8,8 @@ public class MSGDeliver : MonoBehaviour
 {
     private bool hasMSG = false;
     private int msgProbability = 50;
-    private float minReloadTime = 1f;
-    private float maxReloadTime = 4f;
+    private float minReloadTime = 0.5f;
+    private float maxReloadTime = 3f;
 
     private SpriteRenderer spriteRenderer;
     private Collider2D col2D;

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class BombSpawnerAbstract : MonoBehaviour
 {
-    public static int LaunchProbability { get; set; } = 20;
+    public static int LaunchProbability { get; set; } = 15;
 }
