@@ -35,7 +35,7 @@ public class BombCollisionManager : MonoBehaviour
     private void ExplodeBomb(Vector3 collisionPos)
     {
         bombSoundManager.PlaySound(explosionSound);
-        Instantiate(explosionAnim, collisionPos, Quaternion.identity);
+        Instantiate(explosionAnim, new Vector3(gameObject.transform.position.x, collisionPos.y, 0), Quaternion.identity);
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<Collider2D>().enabled = false;
