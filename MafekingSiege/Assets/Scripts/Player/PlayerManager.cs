@@ -75,6 +75,7 @@ public class PlayerManager : MonoBehaviour, IDamageable, IMessageable
             isDead = true;
             OnPlayerDeath?.Invoke();
 
+            animator.SetTrigger("GameOver");
             return;
         }
         healthBar.SetHealth(currentHealth);
