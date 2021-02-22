@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad5a55d24151c84a99c4821057fdf7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 9
+  movementSpeed: 9.5
 --- !u!114 &162179196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1986,7 +1986,7 @@ SpriteRenderer:
   m_SortingLayerID: -630892621
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5193168f3a514594e802fbcd243760a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1a4a358354bad5438162f3277fdd480, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5622,13 +5622,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 918966276}
     m_Modifications:
+    - target: {fileID: 8372591046871410280, guid: 6683653c1fb700a419789f0f7898ef66, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8372591046871410282, guid: 6683653c1fb700a419789f0f7898ef66, type: 3}
       propertyPath: m_Name
       value: FadeIn
       objectReference: {fileID: 0}
     - target: {fileID: 8372591046871410282, guid: 6683653c1fb700a419789f0f7898ef66, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8372591046871410283, guid: 6683653c1fb700a419789f0f7898ef66, type: 3}
       propertyPath: m_Pivot.x
