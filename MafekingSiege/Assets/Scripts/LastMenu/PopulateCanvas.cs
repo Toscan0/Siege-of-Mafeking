@@ -36,10 +36,20 @@ public class PopulateCanvas : MonoBehaviour
         string userName = "Jogador: " + GameManager.UserName;
         string timer = "Tempo jogado: " + ((10 * 60) - TimerManager.CurrentTime);
         string Points = "Pontos: " + GameManager.Points;
+        string Score = "Score: " + ScoreCalculator(TimerManager.CurrentTime, GameManager.Points);
 
         text.text = teamName + "\n" +
             userName + "\n" +
             timer + "\n" +
-            Points + "\n";
+            Points + "\n" +
+            Score + "\n";
+    }
+
+    private float ScoreCalculator(float time, int points)
+    {
+        float t = ((10 * 60) - time);
+
+        // TODO: update formula
+        return points * 10000 + t;
     }
 }
