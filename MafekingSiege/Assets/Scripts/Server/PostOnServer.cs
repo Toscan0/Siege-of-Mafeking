@@ -34,7 +34,7 @@ public class PostOnServer : MonoBehaviour
         float t = ((10 * 60) - time);
 
         // TODO: update formula
-        return points * 100 + t;
+        return points * 10000 + t;
     }
 
     private IEnumerator PostData(string data)
