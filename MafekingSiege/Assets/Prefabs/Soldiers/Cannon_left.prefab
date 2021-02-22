@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 840073841725967244}
   - component: {fileID: 840073841725967245}
   - component: {fileID: 840073841725967246}
-  m_Layer: 0
+  - component: {fileID: -6121374267572595690}
+  m_Layer: 10
   m_Name: Cannon_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,3 +103,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &-6121374267572595690
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840073841725967247}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.71, y: 0.55}
+    newSize: {x: 0.71, y: 0.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34407115, y: -0.023679132}
+      - {x: 0.34543723, y: 0.16864291}
+      - {x: 0.25898978, y: 0.2695356}
+      - {x: 0.18368818, y: 0.23857053}
+      - {x: 0.11964417, y: 0.18946326}
+      - {x: 0.07239548, y: 0.1721874}
+      - {x: -0.015182126, y: 0.10611416}
+      - {x: -0.13601536, y: 0.028596327}
+      - {x: -0.25139326, y: 0.0676779}
+      - {x: -0.32953554, y: 0.08857058}
+      - {x: -0.33587456, y: 0.0958926}
+      - {x: -0.34543723, y: 0.037822697}
+      - {x: -0.13762368, y: -0.020355865}
+      - {x: -0.1626508, y: -0.17864294}
+      - {x: -0.13499999, y: -0.20578408}
+      - {x: 0.30494568, y: -0.20031968}
+      - {x: 0.27986425, y: -0.09013873}
+      - {x: 0.31084737, y: -0.07857054}
+      - {x: 0.329044, y: -0.056749113}

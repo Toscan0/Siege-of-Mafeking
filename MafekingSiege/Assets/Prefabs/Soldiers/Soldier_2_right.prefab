@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 135889883850471729}
   - component: {fileID: 5636041262091134215}
   - component: {fileID: 2391102602328547904}
-  m_Layer: 0
+  - component: {fileID: 6828745573013676165}
+  m_Layer: 10
   m_Name: Soldier_2_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,3 +103,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &6828745573013676165
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349794972474393623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.41, y: 0.54}
+    newSize: {x: 0.41, y: 0.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0010207742, y: 0.023790143}
+      - {x: 0.0020231716, y: 0.044827133}
+      - {x: -0.0045323744, y: 0.073879614}
+      - {x: 0.04724076, y: 0.09102474}
+      - {x: -0.055, y: 0.21051237}
+      - {x: -0.085166715, y: 0.23508333}
+      - {x: -0.15165511, y: 0.17577465}
+      - {x: -0.1359839, y: -0.061873823}
+      - {x: -0.12934726, y: -0.17818214}
+      - {x: -0.011321738, y: -0.17042285}
+      - {x: 0.0013195723, y: -0.027669776}
+      - {x: 0.20306021, y: 0.07215126}
+      - {x: 0.03583571, y: 0.02180563}

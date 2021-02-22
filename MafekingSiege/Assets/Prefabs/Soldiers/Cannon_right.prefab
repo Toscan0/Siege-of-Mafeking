@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7515523463893583491}
   - component: {fileID: 7515523463893583490}
   - component: {fileID: 7515523463893583489}
-  m_Layer: 0
+  - component: {fileID: 2796961890394519276}
+  m_Layer: 10
   m_Name: Cannon_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,3 +103,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &2796961890394519276
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515523463893583488}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.71, y: 0.55}
+    newSize: {x: 0.71, y: 0.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.33295542, y: 0.09128825}
+      - {x: 0.15388007, y: 0.034099415}
+      - {x: -0.015162818, y: 0.10221356}
+      - {x: -0.1666375, y: 0.036640584}
+      - {x: -0.09095596, y: 0.13867916}
+      - {x: -0.05822374, y: 0.17867917}
+      - {x: -0.11013566, y: 0.17407116}
+      - {x: -0.25035277, y: 0.26771414}
+      - {x: -0.2866948, y: 0.20396264}
+      - {x: -0.3430706, y: 0.12200042}
+      - {x: -0.3394179, y: 0.092672944}
+      - {x: -0.27897075, y: 0.07262305}
+      - {x: -0.3535759, y: -0.04050844}
+      - {x: -0.3128037, y: -0.06397098}
+      - {x: -0.26669228, y: -0.0761516}
+      - {x: -0.29171145, y: -0.18980214}
+      - {x: -0.30582026, y: -0.21306995}
+      - {x: 0.11494568, y: -0.20578408}
+      - {x: 0.14084737, y: -0.18310615}
+      - {x: 0.17319465, y: -0.14760815}
+      - {x: 0.16555287, y: -0.026542256}
+      - {x: 0.26662898, y: 0.010823417}
+      - {x: 0.35309303, y: 0.040640313}
