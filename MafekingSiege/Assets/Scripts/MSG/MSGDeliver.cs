@@ -5,7 +5,6 @@ public class MSGDeliver : MonoBehaviour
 {
     [SerializeField]
     private DeliverMSGSpawner deliverMSGSpawner;
-    private int msgProbability = 50;
 
     private Animator animator;
 

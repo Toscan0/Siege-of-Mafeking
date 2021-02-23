@@ -2,51 +2,22 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Collider2D))]
 public class MSGReceiver : MonoBehaviour
 {
-    
-    private bool canRecive = false;
-    private int msgProbability = 50;
-    private float minReloadTime = 0.5f;
-    private float maxReloadTime = 2f;
+    [SerializeField]
+    private ReceiverMSGSpawner receiverMSGSpawner;
 
-    private SpriteRenderer spriteRenderer;
-    private Collider2D col2D;
     private Animator animator;
 
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        col2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        StartCoroutine(SpawnMSG());
-    }
-
-    private IEnumerator SpawnMSG()
-    {
-        while (true)
-        {
-            if (!canRecive)
-            {
-                if (UnityEngine.Random.Range(0, 100) <= msgProbability)
-                {
-                    CanRecive();
-                }
-                else
-                {
-                    CanNotReceive();
-                }
-            }
-
-            yield return new WaitForSeconds(UnityEngine.Random.Range(minReloadTime, maxReloadTime));
-        }
+        SelectNPC();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,25 +29,10 @@ public class MSGReceiver : MonoBehaviour
 
             if (msgReceived)
             {
-                CanNotReceive();
+                receiverMSGSpawner.ReceiverEnabled = false;
+                gameObject.SetActive(false);
             }
         }
-    }
-
-    private void CanNotReceive()
-    {
-        spriteRenderer.enabled = false;
-        col2D.enabled = false;
-        canRecive = false;
-    }
-
-    private void CanRecive()
-    {
-        SelectNPC();
-
-        spriteRenderer.enabled = true;
-        col2D.enabled = true;
-        canRecive = true;
     }
 
     private void SelectNPC()
