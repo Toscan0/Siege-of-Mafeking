@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,7 +23,8 @@ public class DefineTeamName : MonoBehaviour
         M_Hala_Panzi,
         Impisa,
         Katankye,
-        Chief_Lone_Pine_On_Skyline
+        Chief_Lone_Pine_On_Skyline,
+        Dirigente
     }
     private string selectedTeamName = "";
     private Dropdown dropdown;
