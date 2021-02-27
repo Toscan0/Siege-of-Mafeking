@@ -27,11 +27,11 @@ public class DefineUserName : MonoBehaviour
         "Henrique",
         "Francisco",
         "Leonor",
-        "Gonçalo",
+        "Goncalo",
         "Diogo_Pereira",
         "Catarina",
         "Rita",
-        "Ângelo",
+        "Angelo",
     };
     private string[] Baking_Powder =
     {
@@ -39,14 +39,14 @@ public class DefineUserName : MonoBehaviour
         "Rodrigo",
         "Francisco",
         "Tiago",
-        "Gonçalo_Contente",
+        "Goncalo_Contente",
         "Sara",
-        "Gonçalo_Costa",
-        "Tomás",
+        "Goncalo_Costa",
+        "Tomas",
         "Soraia",
         "Ivo",
         "Madalena",
-        "António"
+        "Antonio"
     };
     private string[] M_Hala_Panzi =
     {
@@ -61,13 +61,13 @@ public class DefineUserName : MonoBehaviour
         "Pedro_Neves",
         "David",
         "Sara",
-        "Pedro_Queirós"
+        "Pedro_Queiros"
     };
     private string[] Impisa =
     {
         "None",
-        "Simão",
-        "João",
+        "Simao",
+        "Joao",
         "Leonor_Pereira",
         "Rita",
         "Santiango",
@@ -75,8 +75,8 @@ public class DefineUserName : MonoBehaviour
         "Nuno",
         "Maria",
         "Lara",
-        "Inês",
-        "Ângelo",
+        "Ines",
+        "Angelo",
         "Francisco",
     };
     private string[] Katankye =
@@ -89,11 +89,11 @@ public class DefineUserName : MonoBehaviour
         "Gabriela",
         "Sara",
         "Diogo",
-        "João",
+        "Joao",
         "Marta",
         "Beatriz",
-        "Luísa",
-        "André",
+        "Luisa",
+        "Andre",
         "Mariana"
     };
     private string[] Chief_Lone_Pine_On_Skyline =
@@ -106,11 +106,11 @@ public class DefineUserName : MonoBehaviour
         "Henrique",
         "Francisco",
         "Vasco",
-        "Gonçalo",
-        "Zé",
+        "Goncalo",
+        "Ze",
         "Joana",
         "Beatriz",
-        "André",
+        "Andre",
         "Bernardo"
     };
     private string[] Dirigente =
@@ -120,14 +120,14 @@ public class DefineUserName : MonoBehaviour
         "Claudia",
         "Bernardo",
         "Tiago",
-        "Inês_Mata",
+        "Ines_Mata",
         "Carla",
         "Lituxa",
         "Ricardo",
         "Marcelo",
-        "Sérgio",
-        "Zé",
-        "Inês_Bom",
+        "Sergio",
+        "Ze",
+        "Ines_Bom",
         "Ayala",
         "Fred",
     };
