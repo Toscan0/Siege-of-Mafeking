@@ -8,18 +8,14 @@ public class CheckNames : MonoBehaviour
     private PlayButton playButton;
 
     private string teamName = "";
-    private string userName = "";
 
     private void Awake()
     {
         DefineTeamName.OnTeamNameChoosen += UpdateTeamName;
-        DefineUserName.OnUserNameChoosen += UpdateUserName;
     }
 
     private void UpdateUserName(string newName)
     {
-        userName = newName;
-
         Check();
     }
 
@@ -39,7 +35,7 @@ public class CheckNames : MonoBehaviour
 
     private void Check()
     {
-        if (teamName.Trim() != "" && userName.Trim() != "")
+        if (teamName.Trim() != "")
         {
             playButton.SetInteractable(true);
         }
@@ -52,6 +48,5 @@ public class CheckNames : MonoBehaviour
     private void OnDestroy()
     {
         DefineTeamName.OnTeamNameChoosen -= UpdateTeamName;
-        DefineUserName.OnUserNameChoosen -= UpdateUserName;
     }
 }

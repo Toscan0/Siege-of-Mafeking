@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Carrega F5 ou Recarrega a p\xE1gina para jogares de novo"
+  m_Text: Press F5 or Reload the page to play aguen
 --- !u!222 &14518229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postOnServer: {fileID: 620221400}
-  sendData: 1
+  sendData: 0
 --- !u!1 &1479437304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2085119535
 RectTransform:
   m_ObjectHideFlags: 0

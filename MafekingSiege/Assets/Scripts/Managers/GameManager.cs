@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DefineTeamName.OnTeamNameChoosen += UpdateTeamName;
-        DefineUserName.OnUserNameChoosen += UpdateUserName;
         TimerManager.OnTimeOver += TimeOver;
         PlayerManager.OnPlayerDeath += PlayerDeath;
         PlayerManager.OnMSGDelivered += IncrPoints;
@@ -64,7 +63,6 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         DefineTeamName.OnTeamNameChoosen -= UpdateTeamName;
-        DefineUserName.OnUserNameChoosen -= UpdateUserName;
         TimerManager.OnTimeOver -= TimeOver;
         PlayerManager.OnPlayerDeath -= PlayerDeath;
         PlayerManager.OnMSGDelivered -= IncrPoints;
