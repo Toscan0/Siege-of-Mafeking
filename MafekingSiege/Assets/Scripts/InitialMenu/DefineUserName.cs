@@ -22,7 +22,7 @@ public class DefineUserName : MonoBehaviour
     {
         "None",
         "Diogo",
-        "Constança",
+        "Teresa",
         "Beatriz",
         "Henrique",
         "Francisco",
@@ -51,7 +51,7 @@ public class DefineUserName : MonoBehaviour
     private string[] M_Hala_Panzi =
     {
         "None",
-        "Teresa",
+        "Constanca",
         "Carlota",
         "Beatriz",
         "Anamar",
@@ -116,6 +116,7 @@ public class DefineUserName : MonoBehaviour
     private string[] Dirigente =
     {
         "None",
+        "Franco",
         "Claudia",
         "Bernardo",
         "Tiago",
