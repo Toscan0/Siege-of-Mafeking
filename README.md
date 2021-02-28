@@ -5,7 +5,7 @@ Game created for the Scouts
 # Useful links
  
  * [Game](https://toscan0.itch.io/mafekingsiege)
- * [Video](https://youtu.be/eb7D_ESiGhI)
+ * [Gameplay Video](https://youtu.be/eb7D_ESiGhI)
 
 # Members
  * Tiago Henriques
